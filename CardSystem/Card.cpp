@@ -8,19 +8,23 @@ Card::Card()
 	time0 = time(0);// 开通卡时的时间
 }
 
-void Card::pay()
+bool Card::pay()
 {
 	if (balance >= 2)
 	{
 		balance -= 2;//刷卡上车，扣费2元
 		times_of_this_month++;//本月乘车次数+1
 		total_times++;//总乘车次数+1
+
+		if (balance <= 5)
+			cout << "余额过低，及时充值！" << endl;
+
+		return true;
 	}
 	else
 		cout << "余额不足，不准乘车！" << endl;
 
-	if (balance <= 5)
-		cout << "余额过低，及时充值！" << endl;
+	return false;
 }
 
 void Card::top_up()
@@ -36,7 +40,7 @@ void Card::print()
 {
 	owner.print();
 	cout << "余额：" << balance << endl;
-	cout << "本月乘车次数：" << times_of_this_month << endl;
+	cout << "本月已乘车次数：" << times_of_this_month << endl;
 	cout << "总乘车次数：" << total_times << endl;
 }
 

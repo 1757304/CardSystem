@@ -9,7 +9,7 @@ class Teacher_Card :
 {
 public:
 	Teacher_Card();
-	void pay();//上车刷卡
+	bool pay();//上车刷卡
 	~Teacher_Card();
 };
 

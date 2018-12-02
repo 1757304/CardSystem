@@ -8,13 +8,14 @@ Temporary_Card::Temporary_Card()
 	cin >> valid_time;
 }
 
-void Temporary_Card::pay()
+bool Temporary_Card::pay()
 {
 	time_t now = time(0);// 当前时间
 	if (difftime(now, time0) / 24 / 3600 <= valid_time)//在有效期内按标准乘车
-		Card::pay();
+		return Card::pay();
 	else//过期
 		cout << "此卡已过期！" << endl;
+	return false;
 }
 
 

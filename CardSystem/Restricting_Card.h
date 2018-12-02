@@ -9,7 +9,7 @@ class Restricting_Card :
 {
 public:
 	Restricting_Card();
-	void pay();//上车刷卡
+	bool pay();//上车刷卡
 	~Restricting_Card();
 };
 

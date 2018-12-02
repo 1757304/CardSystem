@@ -15,7 +15,7 @@ class Card
 {
 public:
 	Card();
-	virtual void pay();//上车刷卡
+	virtual bool pay();//上车刷卡
 	void top_up();//充值
 	void print();//显示卡的信息
 	virtual ~Card();
