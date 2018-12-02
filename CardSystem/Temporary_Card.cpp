@@ -1,0 +1,23 @@
+#include "stdafx.h"
+#include "Temporary_Card.h"
+
+
+Temporary_Card::Temporary_Card()
+{
+	cout << "请输入临时卡的有效天数：" << endl;//得到临时卡的有效期
+	cin >> valid_time;
+}
+
+void Temporary_Card::pay()
+{
+	time_t now = time(0);// 当前时间
+	if (difftime(now, time0) / 24 / 3600 <= valid_time)//在有效期内按标准乘车
+		Card::pay();
+	else//过期
+		cout << "此卡已过期！" << endl;
+}
+
+
+Temporary_Card::~Temporary_Card()
+{
+}
