@@ -20,7 +20,8 @@ class People
 {
 public:
 	People();
-	void print();//显示人的信息
+	void InputInfo();//输入人的信息
+	void OutPutInfo();//显示人的信息
 	~People();
 private:
 	string name;//姓名

@@ -8,7 +8,12 @@ Card::Card()
 	time0 = time(0);// 开通卡时的时间
 }
 
-bool Card::pay()
+void Card::InputInfo()
+{
+	owner.InputInfo();//输入持卡者信息
+}
+
+bool Card::Pay()
 {
 	if (balance >= 2)
 	{
@@ -27,7 +32,7 @@ bool Card::pay()
 	return false;
 }
 
-void Card::top_up()
+void Card::TopUp()
 {
 	int money;//充值金额
 	cout << "请输入充值金额：" << endl;
@@ -36,9 +41,9 @@ void Card::top_up()
 	balance += money;
 }
 
-void Card::print()
+void Card::OutPutInfo()
 {
-	owner.print();
+	owner.OutPutInfo();
 	cout << "余额：" << balance << endl;
 	cout << "本月已乘车次数：" << times_of_this_month << endl;
 	cout << "总乘车次数：" << total_times << endl;

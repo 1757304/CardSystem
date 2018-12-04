@@ -23,6 +23,8 @@ class Bus
 {
 public:
 	Bus();
+	void InputInfo();//输入班车的信息
+	void OutPutInfo();//显示班车的信息
 	~Bus();
 private:
 	People driver;//司机

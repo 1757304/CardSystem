@@ -4,6 +4,10 @@
 
 People::People()
 {
+}
+
+void People::InputInfo()
+{
 	int s;
 	cout << "姓名：" << endl;
 	cin >> name;
@@ -19,7 +23,7 @@ People::People()
 	sex = (Sex)s;
 }
 
-void People::print()
+void People::OutPutInfo()
 {
 	cout << "姓名：" << name << endl;
 	cout << "性别：";

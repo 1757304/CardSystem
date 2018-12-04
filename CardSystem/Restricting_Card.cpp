@@ -6,7 +6,7 @@ Restricting_Card::Restricting_Card()
 {
 }
 
-bool Restricting_Card::pay()
+bool Restricting_Card::Pay()
 {
 	if (times_of_this_month < 20)//本月乘车次数小于20，免费
 	{
@@ -16,7 +16,7 @@ bool Restricting_Card::pay()
 	}
 	else//按标准乘车
 	{
-		return Card::pay();
+		return Card::Pay();
 	}
 }
 

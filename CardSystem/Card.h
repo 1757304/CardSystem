@@ -15,9 +15,10 @@ class Card
 {
 public:
 	Card();
-	virtual bool pay();//上车刷卡
-	void top_up();//充值
-	void print();//显示卡的信息
+	void InputInfo();//输入卡的信息
+	virtual bool Pay();//上车刷卡
+	void TopUp();//充值
+	void OutPutInfo();//显示卡的信息
 	virtual ~Card();
 protected:
 	People owner;//持卡者

@@ -150,6 +150,7 @@
     <ClInclude Include="Bus.h" />
     <ClInclude Include="Card.h" />
     <ClInclude Include="People.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Restricting_Card.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Student_Card.h" />
@@ -175,6 +176,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CardSystem.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

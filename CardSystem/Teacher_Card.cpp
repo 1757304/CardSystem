@@ -6,7 +6,7 @@ Teacher_Card::Teacher_Card()
 {
 }
 
-bool Teacher_Card::pay()
+bool Teacher_Card::Pay()
 {
 	times_of_this_month++;//本月乘车次数+1
 	total_times++;//总乘车次数+1
