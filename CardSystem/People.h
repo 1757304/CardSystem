@@ -21,6 +21,7 @@ class People
 public:
 	People();
 	void InputInfo();//输入人的信息
+	string getNum();//得到工资号/学号信息
 	void OutPutInfo();//显示人的信息
 	~People();
 private:
@@ -28,6 +29,6 @@ private:
 	Sex sex;//性别
 	string position;//职务
 	string unit;//所属单位
-	int num;//工资号/学号
+	string num;//工资号/学号
 };
 

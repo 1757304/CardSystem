@@ -23,6 +23,11 @@ void People::InputInfo()
 	sex = (Sex)s;
 }
 
+string People::getNum()
+{
+	return num;//返回工资号/学号
+}
+
 void People::OutPutInfo()
 {
 	cout << "姓名：" << name << endl;

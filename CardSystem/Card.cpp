@@ -13,6 +13,11 @@ void Card::InputInfo()
 	owner.InputInfo();//输入持卡者信息
 }
 
+string Card::getNum()
+{
+	return owner.getNum();//返回卡号
+}
+
 bool Card::Pay()
 {
 	if (balance >= 2)

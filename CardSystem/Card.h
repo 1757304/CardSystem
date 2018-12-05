@@ -16,6 +16,7 @@ class Card
 public:
 	Card();
 	void InputInfo();//输入卡的信息
+	string getNum();//得到卡号信息
 	virtual bool Pay();//上车刷卡
 	void TopUp();//充值
 	void OutPutInfo();//显示卡的信息

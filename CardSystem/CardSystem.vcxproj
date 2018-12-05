@@ -149,6 +149,7 @@
   <ItemGroup>
     <ClInclude Include="Bus.h" />
     <ClInclude Include="Card.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="People.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Restricting_Card.h" />
@@ -162,6 +163,7 @@
     <ClCompile Include="Bus.cpp" />
     <ClCompile Include="Card.cpp" />
     <ClCompile Include="CardSystem.cpp" />
+    <ClCompile Include="menu.cpp" />
     <ClCompile Include="People.cpp" />
     <ClCompile Include="Restricting_Card.cpp" />
     <ClCompile Include="stdafx.cpp">
