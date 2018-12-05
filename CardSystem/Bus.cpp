@@ -16,9 +16,15 @@ void Bus::InputInfo()
 	type = (Type)t;
 	switch (t)//根据车型得到班车的载乘人数
 	{
-	case 0: max = SMALL; break;
-	case 1: max = MIDDLE; break;
-	default: max = LARGE; break;
+	case 0: 
+		max = SMALL; 
+		break;
+	case 1: 
+		max = MIDDLE; 
+		break;
+	default: 
+		max = LARGE; 
+		break;
 	}
 }
 
