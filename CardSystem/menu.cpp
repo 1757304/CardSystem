@@ -22,8 +22,11 @@ int Menu()
 void CardMenu()
 {
 	int m;//返回操作命令
+	int type;//卡的种类
 
 	cout << "********************" << endl;
+	cout << "请输入卡的类型：（学生卡输入1，教师卡输入2，限制卡输入3，临时卡输入4）" << endl;
+	cin >> type;
 	cout << "请选择要进行的操作：" << endl;
 	cout << "1：创建新卡" << endl;
 	cout << "2：查询信息" << endl;
@@ -33,24 +36,24 @@ void CardMenu()
 	cin >> m;
 	cout << "********************" << endl;
 	
-	SelectMenu(m);
+	SelectMenu(type, m);
 }
 
-void SelectMenu(int m)
+void SelectMenu(int type, int m)
 {
 	switch (m)
 	{
 	case 1:
-		Menu1();
+		Menu1(type);
 		break;
 	case 2:
-		Menu2();
+		Menu2(type);
 		break;
 	case 3:
-		Menu3();
+		Menu3(type);
 		break;
 	case 4:
-		Menu4();
+		Menu4(type);
 		break;
 	default:
 		break;
@@ -58,50 +61,64 @@ void SelectMenu(int m)
 }
 
 
-void Menu1()
+void Menu1(int type)
 {
-	int type, money;
-
 	cout << "********************" << endl;
-	cout << "请输入卡的类型：（学生卡输入1，教师卡输入2，限制卡输入3，临时卡输入4）" << endl;
-	cin >> type;
-	CreateCard(type);//创建新卡
+	//switch (type)
+	//{
+	//case 1:
+	//	CreateCard<Student_Card>();
+	//	break;
+	//case 2:
+	//	CreateCard<Teacher_Card>();
+	//	break;
+	//case 3:
+	//	CreateCard<Restrict_Card>();
+	//	break;
+	//case 4:
+	//	CreateCard<Temporary_Card>();
+	//	break;
+	//default:
+	//	break;
+	//}
 	cout << endl;
 	CardMenu();//返回初始菜单
 }
 
-void Menu2()
+void Menu2(int type)
 {
 	string num;
 
 	cout << "********************" << endl;
 	cout << "请输入您的卡号：" << endl;
 	cin >> num;
-	OutInfo(num);//查询信息
+	//OutInfo(num);//查询信息
 	cout << endl;
 	CardMenu();//返回初始菜单
 }
 
-void Menu3()
+void Menu3(int type)
 {
+	int type;
 	string num;
 
 	cout << "********************" << endl;
 	cout << "请输入您的卡号：" << endl;
 	cin >> num;
-	TopUp(num);//余额充值
+	//TopUp(num);//余额充值
 	cout << endl;
 	CardMenu();//返回初始菜单
 }
 
-void Menu4()
+void Menu4(int type)
 {
+	int type;
 	string num;
 
 	cout << "********************" << endl;
 	cout << "请输入您的卡号：" << endl;
 	cin >> num;
-	DestroyCard(num);//销毁卡片
+	//DestroyCard(num);//销毁卡片
 	cout << endl;
 	CardMenu();//返回初始菜单
 }

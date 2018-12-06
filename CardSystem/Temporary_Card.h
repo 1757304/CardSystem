@@ -10,9 +10,8 @@ class Temporary_Card :
 {
 public:
 	Temporary_Card();
+	void InputInfo();//输入卡的信息
 	bool Pay();//上车刷卡
 	~Temporary_Card();
-private:
-	int valid_time;//临时卡的有效天数
 };
 

@@ -4,6 +4,11 @@
 
 Temporary_Card::Temporary_Card()
 {
+}
+
+void Temporary_Card::InputInfo()
+{
+	Card::InputInfo();
 	cout << "请输入临时卡的有效天数：" << endl;//得到临时卡的有效期
 	cin >> valid_time;
 }

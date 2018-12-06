@@ -27,9 +27,6 @@
     <ClInclude Include="People.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Restricting_Card.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Teacher_Card.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -51,6 +48,9 @@
     <ClInclude Include="data.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Restrict_Card.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -63,9 +63,6 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="People.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Restricting_Card.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="Teacher_Card.cpp">
@@ -86,13 +83,16 @@
     <ClCompile Include="data.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClCompile Include="Restrict_Card.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="CardSystem.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

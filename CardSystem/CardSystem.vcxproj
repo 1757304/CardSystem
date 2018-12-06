@@ -153,7 +153,7 @@
     <ClInclude Include="menu.h" />
     <ClInclude Include="People.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="Restricting_Card.h" />
+    <ClInclude Include="Restrict_Card.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Student_Card.h" />
     <ClInclude Include="targetver.h" />
@@ -167,7 +167,7 @@
     <ClCompile Include="data.cpp" />
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="People.cpp" />
-    <ClCompile Include="Restricting_Card.cpp" />
+    <ClCompile Include="Restrict_Card.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -179,10 +179,10 @@
     <ClCompile Include="Temporary_Card.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ResourceCompile Include="CardSystem.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="CardSystem.rc" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
