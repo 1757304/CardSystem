@@ -27,28 +27,22 @@
     <ClInclude Include="People.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Teacher_Card.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Student_Card.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Temporary_Card.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="Bus.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="menu.h">
+    <ClInclude Include="RestrictCard.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="data.h">
+    <ClInclude Include="StudentCard.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Restrict_Card.h">
+    <ClInclude Include="TeacherCard.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TemporaryCard.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -65,25 +59,19 @@
     <ClCompile Include="People.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Teacher_Card.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Student_Card.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Temporary_Card.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Bus.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="menu.cpp">
+    <ClCompile Include="RestrictCard.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="data.cpp">
+    <ClCompile Include="StudentCard.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Restrict_Card.cpp">
+    <ClCompile Include="TemporaryCard.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TeacherCard.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -4,12 +4,13 @@
 * 限制卡
 * 每月的前20次免费，之后每次扣除2元
 */
-class Restrict_Card :
+class RestrictCard :
 	public Card
 {
 public:
-	Restrict_Card();
+	RestrictCard();
 	bool Pay();//上车刷卡
-	~Restrict_Card();
+	void OutPutInfo();
+	~RestrictCard();
 };
 

@@ -20,8 +20,8 @@ class People
 {
 public:
 	People();
-	void InputInfo();//输入人的信息
-	string getNum();//得到工资号/学号信息
+	void InputInfo(string num);//输入人的信息
+	string GetNum();//得到工资号/学号信息
 	void OutPutInfo();//显示人的信息
 	~People();
 private:

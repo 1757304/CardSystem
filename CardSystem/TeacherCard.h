@@ -4,12 +4,13 @@
 * 教师卡
 * 免费乘车
 */
-class Teacher_Card :
+class TeacherCard :
 	public Card
 {
 public:
-	Teacher_Card();
+	TeacherCard();
 	bool Pay();//上车刷卡
-	~Teacher_Card();
+	void OutPutInfo();
+	~TeacherCard();
 };
 

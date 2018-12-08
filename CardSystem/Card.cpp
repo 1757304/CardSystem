@@ -8,14 +8,14 @@ Card::Card()
 	time0 = time(0);// 开通卡时的时间
 }
 
-void Card::InputInfo()
+void Card::InputInfo(string num)
 {
-	owner.InputInfo();//输入持卡者信息
+	owner.InputInfo(num);//输入持卡者信息
 }
 
-string Card::getNum()
+string Card::GetNum()
 {
-	return owner.getNum();//返回卡号
+	return owner.GetNum();//返回卡号
 }
 
 bool Card::Pay()

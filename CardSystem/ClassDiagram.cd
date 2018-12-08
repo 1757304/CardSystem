@@ -10,7 +10,7 @@
   <Class Name="Card" Collapsed="true">
     <Position X="3.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IABAAAAgAAAAggAAQAAAAAEYAAEAACgAACAAAAAAAAA=</HashCode>
+      <HashCode>IABAAAAgAAAAggAAQAAAAAEYAAAAAAgAACAgAAAAAAA=</HashCode>
       <FileName>Card.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -21,32 +21,32 @@
       <FileName>People.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Restrict_Card" Collapsed="true">
+  <Class Name="RestrictCard" Collapsed="true">
     <Position X="5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAgAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
-      <FileName>Restrict_Card.h</FileName>
+      <HashCode>AAAAAAAAAAAAAgAAAAAACAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RestrictCard.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Student_Card" Collapsed="true">
+  <Class Name="StudentCard" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
-      <FileName>Student_Card.h</FileName>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>StudentCard.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Teacher_Card" Collapsed="true">
+  <Class Name="TeacherCard" Collapsed="true">
     <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
-      <FileName>Teacher_Card.h</FileName>
+      <HashCode>AAAAAAAAACAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>TeacherCard.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Temporary_Card" Collapsed="true">
+  <Class Name="TemporaryCard" Collapsed="true">
     <Position X="7.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAAAgAAAAAAAACQAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Temporary_Card.h</FileName>
+      <HashCode>AEAAAAAgAAAAAgAAAAAAAAAQAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TemporaryCard.h</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="Type" Collapsed="true">

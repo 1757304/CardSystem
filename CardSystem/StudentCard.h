@@ -4,11 +4,12 @@
 * 学生卡
 * 每次乘车扣除2元
 */
-class Student_Card :
+class StudentCard :
 	public Card
 {
 public:
-	Student_Card();
-	~Student_Card();
+	StudentCard();
+	void OutPutInfo();
+	~StudentCard();
 };
 

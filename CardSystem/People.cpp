@@ -6,7 +6,7 @@ People::People()
 {
 }
 
-void People::InputInfo()
+void People::InputInfo(string num)
 {
 	int s;
 	cout << "姓名：" << endl;
@@ -17,13 +17,11 @@ void People::InputInfo()
 	cin >> position;
 	cout << "所属单位：" << endl;
 	cin >> unit;
-	cout << "工资号/学号：" << endl;
-	cin >> num;
 
 	sex = (Sex)s;
 }
 
-string People::getNum()
+string People::GetNum()
 {
 	return num;//返回工资号/学号
 }

@@ -15,8 +15,8 @@ class Card
 {
 public:
 	Card();
-	virtual void InputInfo();//输入卡的信息
-	string getNum();//得到卡号信息
+	virtual void InputInfo(string num);//输入卡的信息
+	string GetNum();//得到卡号信息
 	virtual bool Pay();//上车刷卡
 	void TopUp();//充值
 	void OutPutInfo();//显示卡的信息
@@ -27,6 +27,5 @@ protected:
 	int times_of_this_month;//本月乘车次数
 	int total_times;//总乘车次数
 	time_t time0;//开通时间
-	int valid_time;//有效天数
 };
 

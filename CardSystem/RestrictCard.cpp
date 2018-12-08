@@ -1,12 +1,12 @@
 #include "stdafx.h"
-#include "Restrict_Card.h"
+#include "RestrictCard.h"
 
 
-Restrict_Card::Restrict_Card()
+RestrictCard::RestrictCard()
 {
 }
 
-bool Restrict_Card::Pay()
+bool RestrictCard::Pay()
 {
 	if (times_of_this_month < 20)//本月乘车次数小于20，免费
 	{
@@ -20,7 +20,13 @@ bool Restrict_Card::Pay()
 	}
 }
 
+void RestrictCard::OutPutInfo()
+{
+	cout << "类型：限制卡" << endl;
+	Card::OutPutInfo();
+}
 
-Restrict_Card::~Restrict_Card()
+
+RestrictCard::~RestrictCard()
 {
 }

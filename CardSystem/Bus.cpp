@@ -8,7 +8,10 @@ Bus::Bus()
 
 void Bus::InputInfo()
 {
-	driver.InputInfo();//输入司机的信息
+	string num;
+	cout << "工资号/学号：" << endl;
+	cin >> num;
+	driver.InputInfo(num);//输入司机的信息
 
 	int t;
 	cout << "车型：（小型输入0，中型输入1，大型输入2）" << endl;
