@@ -4,27 +4,73 @@
 
 Card::Card()
 {
-	balance = times_of_this_month = total_times = 0;//初始时余额为0，乘车次数为0
+	balance = times_of_this_month = 0;//初始时余额为0，乘车次数为0
 	time0 = time(0);// 开通卡时的时间
 }
 
+//输入卡的信息
 void Card::InputInfo(string num)
 {
+	int t;
+
 	owner.InputInfo(num);//输入持卡者信息
+
+	cout << "卡的类型：（学生卡输入0，教师卡输入1，限制卡输入2，临时卡输入3）" << endl;
+	cin >> t;
+	type = (CardType)t;
+
+	if (type == TEM)//临时卡
+	{
+		cout << "请输入临时卡的有效天数：" << endl;//得到临时卡的有效期
+		cin >> valid_time;
+	}
 }
 
+//得到卡号信息
 string Card::GetNum()
 {
 	return owner.GetNum();//返回卡号
 }
 
+//上车
+bool Card::GetOn()
+{
+	if (type == STU)//学生卡
+		return Pay();
+	else if (type == TEA)//教师卡
+	{
+		times_of_this_month++;//本月乘车次数+1
+		return true;
+	}
+	else if (type == RES)//限制卡
+	{
+		if (times_of_this_month < 20)//本月乘车次数小于20，免费
+		{
+			times_of_this_month++;//本月乘车次数+1
+			return true;
+		}
+		else//按标准乘车
+			return Pay();
+	}
+	else//临时卡
+	{
+		time_t now = time(0);// 当前时间
+		if (difftime(now, time0) / 24 / 3600 <= valid_time)//在有效期内按标准乘车
+			return Pay();
+		else//过期
+			cout << "此卡已过期！" << endl;
+	}
+
+	return false;
+}
+
+//扣费
 bool Card::Pay()
 {
 	if (balance >= 2)
 	{
 		balance -= 2;//刷卡上车，扣费2元
 		times_of_this_month++;//本月乘车次数+1
-		total_times++;//总乘车次数+1
 
 		if (balance <= 5)
 			cout << "余额过低，及时充值！" << endl;
@@ -37,6 +83,7 @@ bool Card::Pay()
 	return false;
 }
 
+//充值
 void Card::TopUp()
 {
 	int money;//充值金额
@@ -46,12 +93,12 @@ void Card::TopUp()
 	balance += money;
 }
 
+//显示卡的信息
 void Card::OutPutInfo()
 {
 	owner.OutPutInfo();
 	cout << "余额：" << balance << endl;
 	cout << "本月已乘车次数：" << times_of_this_month << endl;
-	cout << "总乘车次数：" << total_times << endl;
 }
 
 

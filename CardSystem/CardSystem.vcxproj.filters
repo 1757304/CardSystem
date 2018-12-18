@@ -33,16 +33,10 @@
     <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="RestrictCard.h">
+    <ClInclude Include="menu.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="StudentCard.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TeacherCard.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TemporaryCard.h">
+    <ClInclude Include="data.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,16 +56,10 @@
     <ClCompile Include="Bus.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="RestrictCard.cpp">
+    <ClCompile Include="menu.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="StudentCard.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TemporaryCard.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TeacherCard.cpp">
+    <ClCompile Include="data.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

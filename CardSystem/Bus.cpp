@@ -6,6 +6,7 @@ Bus::Bus()
 {
 }
 
+//输入班车的信息
 void Bus::InputInfo()
 {
 	string num;
@@ -16,7 +17,7 @@ void Bus::InputInfo()
 	int t;
 	cout << "车型：（小型输入0，中型输入1，大型输入2）" << endl;
 	cin >> t;
-	type = (Type)t;
+	type = (BusType)t;
 	switch (t)//根据车型得到班车的载乘人数
 	{
 	case 0: 
@@ -31,6 +32,7 @@ void Bus::InputInfo()
 	}
 }
 
+//显示班车的信息
 void Bus::OutPutInfo()
 {
 }

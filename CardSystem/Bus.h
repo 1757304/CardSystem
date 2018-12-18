@@ -11,7 +11,7 @@ using namespace std;
 * M 中型 30人
 * L 大型 40人
 */
-enum Type { S, M, L };
+enum BusType { S, M, L };
 const int SMALL = 20, MIDDLE = 30, LARGE = 40;
 
 /**
@@ -28,7 +28,7 @@ public:
 	~Bus();
 private:
 	People driver;//司机
-	Type type;//车型
+	BusType type;//车型
 	int max;//载乘人数
 };
 

@@ -6,6 +6,7 @@ People::People()
 {
 }
 
+//输入人的信息
 void People::InputInfo(string num)
 {
 	int s;
@@ -21,11 +22,13 @@ void People::InputInfo(string num)
 	sex = (Sex)s;
 }
 
+//得到工资号/学号信息
 string People::GetNum()
 {
 	return num;//返回工资号/学号
 }
 
+//显示人的信息
 void People::OutPutInfo()
 {
 	cout << "姓名：" << name << endl;
