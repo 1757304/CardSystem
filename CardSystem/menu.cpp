@@ -45,6 +45,7 @@ void SeleteMenu(vector<Card>& c)
 		Menu4(c);
 		break;
 	default:
+		Menu0(c);
 		break;
 	}
 }

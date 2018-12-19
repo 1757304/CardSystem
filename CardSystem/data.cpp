@@ -93,8 +93,8 @@ int Search(vector<Card>& c, string num)
 	}
 	if (c[low].GetNum() == num)
 		return low;
-
-	return -1;//查找失败
+	else
+		return -1;//查找失败
 }
 
 //更新文件

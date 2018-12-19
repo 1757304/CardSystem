@@ -29,6 +29,6 @@ private:
 	Sex sex;//性别
 	string position;//职务
 	string unit;//所属单位
-	string num;//工资号/学号
+	string number;//工资号/学号
 };
 

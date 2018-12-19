@@ -18,14 +18,14 @@ void People::InputInfo(string num)
 	cin >> position;
 	cout << "所属单位：" << endl;
 	cin >> unit;
-
+	number = num;
 	sex = (Sex)s;
 }
 
 //得到工资号/学号信息
 string People::GetNum()
 {
-	return num;//返回工资号/学号
+	return number;//返回工资号/学号
 }
 
 //显示人的信息
@@ -39,7 +39,7 @@ void People::OutPutInfo()
 		cout << "女" << endl;
 	cout << "职务：" << position << endl;
 	cout << "所属单位：" << unit << endl;
-	cout << "工资号/学号：" << num << endl;
+	cout << "工资号/学号：" << number << endl;
 }
 
 
