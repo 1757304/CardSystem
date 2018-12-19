@@ -9,7 +9,7 @@ Card::Card()
 }
 
 //输入卡的信息
-void Card::InputInfo(string num)
+void Card::InputInfo(char * num)
 {
 	int t;
 
@@ -27,7 +27,7 @@ void Card::InputInfo(string num)
 }
 
 //得到卡号信息
-string Card::GetNum()
+char * Card::GetNum()
 {
 	return owner.GetNum();//返回卡号
 }
@@ -87,15 +87,27 @@ bool Card::Pay()
 void Card::TopUp()
 {
 	int money;//充值金额
+	cout << "当前余额：" << balance << endl;
 	cout << "请输入充值金额：" << endl;
 	cin >> money;
 
 	balance += money;
+	cout << "充值成功，当前余额：" << balance << endl;
 }
 
 //显示卡的信息
 void Card::OutPutInfo()
 {
+	cout << "类型：";
+	if (type == STU)//学生卡
+		cout << "学生卡" << endl;
+	else if (type == TEA)//教师卡
+		cout << "教师卡" << endl;
+	else if (type == RES)//限制卡
+		cout << "限制卡" << endl;
+	else//临时卡
+		cout << "临时卡" << endl;
+
 	owner.OutPutInfo();
 	cout << "余额：" << balance << endl;
 	cout << "本月已乘车次数：" << times_of_this_month << endl;

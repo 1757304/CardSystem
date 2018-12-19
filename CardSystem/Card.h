@@ -1,10 +1,6 @@
 #pragma once
 #include "People.h"
-#include <iostream>
-#include <string>
 #include <ctime>
-
-using namespace std;
 
 /**
 * STU 学生卡
@@ -22,8 +18,8 @@ class Card
 {
 public:
 	Card();
-	void InputInfo(string num);//输入卡的信息
-	string GetNum();//得到卡号信息
+	void InputInfo(char * num);//输入卡的信息
+	char * GetNum();//得到卡号信息
 	bool GetOn();//上车
 	bool Pay();//扣费
 	void TopUp();//充值

@@ -1,9 +1,5 @@
 #pragma once
 #include "People.h"
-#include <iostream>
-#include <string>
-
-using namespace std;
 
 /**
 * ³µÐÍ

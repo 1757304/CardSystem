@@ -3,7 +3,6 @@
 // 
 
 #pragma once
-#include <iostream>
 #include <fstream>//将信息保存在文件里
 #include <vector>//数组
 #include "Card.h"//学生卡
@@ -17,12 +16,12 @@ const string f2 = "Bus.txt";//车文件名
 int GetNumberFromFile(string fname);//得到文件中数据的总量
 void GetData(string fname, vector<Card>& c);//得到文件中数据
 void Sort(vector<Card>& c);//按卡号排序
-int Search(vector<Card>& c, string num);//查找卡片
+int Search(vector<Card>& c, char * num);//查找卡片
 void FlashFile(string fname, vector<Card>& c);//更新文件
 
 //卡片操作
 
-void CreateCard(vector<Card>& c, string num);//创建新卡
-void OutPutInfo(vector<Card>& c, string num);//查询信息
-void TopUp(vector<Card>& c, string num);//余额充值
-void DestroyCard(vector<Card>& c, string num);//销毁卡片
+void CreateCard(vector<Card>& c, char * num);//创建新卡
+void OutPutInfo(vector<Card>& c, char * num);//查询信息
+void TopUp(vector<Card>& c, char * num);//余额充值
+void DestroyCard(vector<Card>& c, char * num);//销毁卡片

@@ -3,11 +3,6 @@
 // 
 
 #pragma once
-#include <iostream>
-#include <fstream>//将信息保存在文件里
-#include <vector>//数组
-#include "Card.h"//学生卡
-#include "Bus.h"//班车
 #include "data.h"//文件和卡的操作
 
 using namespace std;

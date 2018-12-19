@@ -60,11 +60,11 @@ void Sort(vector<Card>& c)
 	bool flag = true;//标记
 	Card t;//临时变量
 
-	for (i = 0; i < c.size() && flag; i++)
-		for (j = 0; j < c.size() - i; j++)
+	for (i = 0; i < c.size() - 1 && flag; i++)
+		for (j = 0; j < c.size() - i - 1; j++)
 		{
 			flag = false;
-			if (c[j].GetNum() > c[j + 1].GetNum())
+			if (strcmp(c[j].GetNum(), c[j + 1].GetNum()) > 0)
 			{
 				t = c[j];
 				c[j] = c[j + 1];
@@ -75,7 +75,7 @@ void Sort(vector<Card>& c)
 }
 
 //查找卡片
-int Search(vector<Card>& c, string num)
+int Search(vector<Card>& c, char * num)
 {
 	if (c.size() == 0)
 		return -1;
@@ -84,14 +84,15 @@ int Search(vector<Card>& c, string num)
 	while (low < high)
 	{
 		mid = (low + high) / 2;
-		if (c[mid].GetNum() == num)
+		int t = strcmp(c[mid].GetNum(), num);
+		if (t == 0)
 			return mid;
-		else if (c[mid].GetNum() > num)
+		else if (t > 0)
 			high = mid - 1;
 		else
 			low = mid + 1;
 	}
-	if (c[low].GetNum() == num)
+	if (strcmp(c[low].GetNum(), num) == 0)
 		return low;
 	else
 		return -1;//查找失败
@@ -121,7 +122,7 @@ void FlashFile(string fname, vector<Card>& c)
 //卡片操作
 
 //创建新卡
-void CreateCard(vector<Card>& c, string num)
+void CreateCard(vector<Card>& c, char * num)
 {
 	int s = Search(c, num);
 	if (s != -1)//已存在
@@ -139,7 +140,7 @@ void CreateCard(vector<Card>& c, string num)
 }
 
 //查询信息
-void OutPutInfo(vector<Card>& c, string num)
+void OutPutInfo(vector<Card>& c, char * num)
 {
 	int s = Search(c, num);
 	if (s == -1)//没找到
@@ -149,7 +150,7 @@ void OutPutInfo(vector<Card>& c, string num)
 }
 
 //余额充值
-void TopUp(vector<Card>& c, string num)
+void TopUp(vector<Card>& c, char * num)
 {
 	int s = Search(c, num);
 	if (s == -1)//没找到
@@ -159,7 +160,7 @@ void TopUp(vector<Card>& c, string num)
 }
 
 //销毁卡片
-void DestroyCard(vector<Card>& c, string num)
+void DestroyCard(vector<Card>& c, char * num)
 {
 	int s = Search(c, num);
 	if (s == -1)//没找到

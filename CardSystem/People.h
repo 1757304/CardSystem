@@ -1,6 +1,9 @@
 #pragma once
+#pragma warning(disable:4996)
 #include <iostream>
 #include <string>
+#include <cstring>
+#define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
 
@@ -20,15 +23,15 @@ class People
 {
 public:
 	People();
-	void InputInfo(string num);//输入人的信息
-	string GetNum();//得到工资号/学号信息
+	void InputInfo(char * num);//输入人的信息
+	char * GetNum();//得到工资号/学号信息
 	void OutPutInfo();//显示人的信息
 	~People();
 private:
-	string name;//姓名
+	char name[32];//姓名
 	Sex sex;//性别
-	string position;//职务
-	string unit;//所属单位
-	string number;//工资号/学号
+	char position[32];//职务
+	char unit[32];//所属单位
+	char number[32];//工资号/学号
 };
 

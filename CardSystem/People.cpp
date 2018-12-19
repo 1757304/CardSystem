@@ -1,13 +1,13 @@
 #include "stdafx.h"
 #include "People.h"
-
+#define _CRT_SECURE_NO_WARNINGS
 
 People::People()
 {
 }
 
 //输入人的信息
-void People::InputInfo(string num)
+void People::InputInfo(char * num)
 {
 	int s;
 	cout << "姓名：" << endl;
@@ -18,12 +18,12 @@ void People::InputInfo(string num)
 	cin >> position;
 	cout << "所属单位：" << endl;
 	cin >> unit;
-	number = num;
+	strcpy(number, num);
 	sex = (Sex)s;
 }
 
 //得到工资号/学号信息
-string People::GetNum()
+char *  People::GetNum()
 {
 	return number;//返回工资号/学号
 }

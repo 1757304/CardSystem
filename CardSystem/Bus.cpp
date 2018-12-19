@@ -9,7 +9,7 @@ Bus::Bus()
 //输入班车的信息
 void Bus::InputInfo()
 {
-	string num;
+	char num[32];
 	cout << "工资号/学号：" << endl;
 	cin >> num;
 	driver.InputInfo(num);//输入司机的信息

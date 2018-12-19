@@ -53,7 +53,7 @@ void SeleteMenu(vector<Card>& c)
 //创建新卡菜单
 void Menu1(vector<Card>& c)
 {
-	string num;
+	char num[32];
 
 	cout << "********************" << endl;
 	cout << "请输入您的卡号：" << endl;
@@ -66,7 +66,7 @@ void Menu1(vector<Card>& c)
 //查询信息菜单
 void Menu2(vector<Card>& c)
 {
-	string num;
+	char num[32];
 
 	cout << "********************" << endl;
 	cout << "请输入您的卡号：" << endl;
@@ -79,7 +79,7 @@ void Menu2(vector<Card>& c)
 //余额充值菜单
 void Menu3(vector<Card>& c)
 {
-	string num;
+	char num[32];
 
 	cout << "********************" << endl;
 	cout << "请输入您的卡号：" << endl;
@@ -92,7 +92,7 @@ void Menu3(vector<Card>& c)
 //销毁卡片菜单
 void Menu4(vector<Card>& c)
 {
-	string num;
+	char num[32];
 
 	cout << "********************" << endl;
 	cout << "请输入您的卡号：" << endl;
