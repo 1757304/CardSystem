@@ -18,8 +18,8 @@ class Card
 {
 public:
 	Card();
-	void InputInfo(char * num);//输入卡的信息
-	char * GetNum();//得到卡号信息
+	void InputInfo(unsigned int num);//输入卡的信息
+	unsigned int GetNum();//得到卡号信息
 	bool GetOn();//上车
 	bool Pay();//扣费
 	void TopUp();//充值

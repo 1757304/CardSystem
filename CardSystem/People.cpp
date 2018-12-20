@@ -7,7 +7,7 @@ People::People()
 }
 
 //输入人的信息
-void People::InputInfo(char * num)
+void People::InputInfo(unsigned int num)
 {
 	int s;
 	cout << "姓名：" << endl;
@@ -18,12 +18,12 @@ void People::InputInfo(char * num)
 	cin >> position;
 	cout << "所属单位：" << endl;
 	cin >> unit;
-	strcpy(number, num);
+	number = num;
 	sex = (Sex)s;
 }
 
 //得到工资号/学号信息
-char *  People::GetNum()
+unsigned int  People::GetNum()
 {
 	return number;//返回工资号/学号
 }

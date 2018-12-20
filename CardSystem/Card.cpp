@@ -9,7 +9,7 @@ Card::Card()
 }
 
 //输入卡的信息
-void Card::InputInfo(char * num)
+void Card::InputInfo(unsigned int num)
 {
 	int t;
 
@@ -27,7 +27,7 @@ void Card::InputInfo(char * num)
 }
 
 //得到卡号信息
-char * Card::GetNum()
+unsigned int Card::GetNum()
 {
 	return owner.GetNum();//返回卡号
 }

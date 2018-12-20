@@ -23,8 +23,8 @@ class People
 {
 public:
 	People();
-	void InputInfo(char * num);//输入人的信息
-	char * GetNum();//得到工资号/学号信息
+	void InputInfo(unsigned int num);//输入人的信息
+	unsigned int GetNum();//得到工资号/学号信息
 	void OutPutInfo();//显示人的信息
 	~People();
 private:
@@ -32,6 +32,6 @@ private:
 	Sex sex;//性别
 	char position[32];//职务
 	char unit[32];//所属单位
-	char number[32];//工资号/学号
+	unsigned int number;//工资号/学号
 };
 
