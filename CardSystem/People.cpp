@@ -4,6 +4,10 @@
 
 People::People()
 {
+	for (int i = 0; i < N; i++)
+	{
+		name[i] = position[i] = unit[i] = 0;
+	}
 }
 
 //输入人的信息
@@ -14,6 +18,11 @@ void People::InputInfo(unsigned int num)
 	cin >> name;
 	cout << "性别：（男性输入0，女性输入1）" << endl;
 	cin >> s;
+	while (s != 0 && s != 1)
+	{
+		cout << "重新输入性别：（男性输入0，女性输入1）" << endl;
+		cin >> s;
+	}	
 	cout << "职务：" << endl;
 	cin >> position;
 	cout << "所属单位：" << endl;

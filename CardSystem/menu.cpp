@@ -2,17 +2,23 @@
 #include "menu.h"
 
 //总菜单
-void Menu(vector<Card>& c)
+void Menu()
 {
 	int type;
 
-	cout << "********************" << endl;
-	cout << "***欢迎使用本系统***" << endl;
-	cout << "********************" << endl;
+	cout << "******************************" << endl;
+	cout << "********欢迎使用本系统********" << endl;
+	cout << "******************************" << endl;
 	cout << "请选择要进入的系统：（卡片输入0，班车输入1）" << endl;
 	cin >> type;
 	if (type == 0)
+	{
+		int n = GetNumberFromFile(fname);//得到卡文件中数据总量
+		vector<Card>c(n);
+		GetData(fname, c);//取出数据
 		SeleteMenu(c);
+	}
+		
 	else
 		BusMenu();
 }
@@ -20,9 +26,10 @@ void Menu(vector<Card>& c)
 //选择菜单
 void SeleteMenu(vector<Card>& c)
 {
+
 	int m;//返回操作命令
 
-	cout << "********************" << endl;
+	cout << "******************************" << endl;
 	cout << "请选择要进行的操作：" << endl;
 	cout << "1：创建新卡" << endl;
 	cout << "2：查询信息" << endl;
@@ -55,7 +62,7 @@ void Menu1(vector<Card>& c)
 {
 	unsigned int num;
 
-	cout << "********************" << endl;
+	cout << "******************************" << endl;
 	cout << "请输入您的卡号：" << endl;
 	cin >> num;
 	CreateCard(c, num);//创建新卡
@@ -68,7 +75,7 @@ void Menu2(vector<Card>& c)
 {
 	unsigned int num;
 
-	cout << "********************" << endl;
+	cout << "******************************" << endl;
 	cout << "请输入您的卡号：" << endl;
 	cin >> num;
 	OutPutInfo(c, num);//查询信息
@@ -81,7 +88,7 @@ void Menu3(vector<Card>& c)
 {
 	unsigned int num;
 
-	cout << "********************" << endl;
+	cout << "******************************" << endl;
 	cout << "请输入您的卡号：" << endl;
 	cin >> num;
 	TopUp(c, num);//余额充值
@@ -94,7 +101,7 @@ void Menu4(vector<Card>& c)
 {
 	unsigned int num;
 
-	cout << "********************" << endl;
+	cout << "******************************" << endl;
 	cout << "请输入您的卡号：" << endl;
 	cin >> num;
 	DestroyCard(c, num);//销毁卡片
@@ -105,11 +112,21 @@ void Menu4(vector<Card>& c)
 //退出系统
 void Menu0(vector<Card>& c)
 {
-	FlashFile(f1, c);
-	cout << "*****使用愉快！*****" << endl;
+	FlashFile(fname, c);//更新文件
+	cout << "**********使用愉快！**********" << endl;
 }
 
 //班车菜单
 void BusMenu()
 {
+	Bus bus;//班车
+	cout << "******************************" << endl;
+	bus.InputInfo();//输入班车信息
+	cout << "---" << endl;
+	cout << "地点：南校区" << endl;
+	bus.GetOn(fname);
+	cout << "---" << endl;
+	cout << "地点：北校区" << endl;
+	bus.GetOn(fname);
+	cout << "**********使用愉快！**********" << endl;
 }

@@ -8,8 +8,7 @@
 #include "Card.h"//学生卡
 #include "Bus.h"//车
 
-const string f1 = "Card.txt";//卡文件名
-const string f2 = "Bus.txt";//车文件名
+const string fname = "Card.txt";//卡文件名
 
 //文件操作
 

@@ -1,63 +1,42 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Bus" Collapsed="true">
-    <Position X="9.75" Y="0.5" Width="1.5" />
+    <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAEAAAAAAAAAAAAAAAAACQIAABAAAAACAAAAAAAAA=</HashCode>
       <FileName>Bus.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Card" Collapsed="true">
-    <Position X="3.75" Y="0.5" Width="1.5" />
+    <Position X="4.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IABAAAAgAAAAggAAQAAAAAEYAAEAAAgAACAgAAAAAAA=</HashCode>
+      <HashCode>IABAAAAgAAAAggAAQAAAAAEYAAEBAAAAACAgAAAgAAA=</HashCode>
       <FileName>Card.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="People" Collapsed="true">
-    <Position X="11.5" Y="0.5" Width="1.5" />
+    <Position X="2.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAACAAAIAgAAAAAAQAIAAQAAAEAAAAACAgAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAIAgQAAAAAQAIAAQAAAEAAAAACAgAAAAAAA=</HashCode>
       <FileName>People.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RestrictCard" Collapsed="true">
-    <Position X="5" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAACAAIAAAAAAAAACAAAAAAAAA=</HashCode>
-      <FileName>RestrictCard.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="StudentCard" Collapsed="true">
-    <Position X="0.5" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAACAAAAAA=</HashCode>
-      <FileName>StudentCard.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TeacherCard" Collapsed="true">
-    <Position X="2.75" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAgAAAAAAAAAAAAAAAAAAACAAAAAAAAE=</HashCode>
-      <FileName>TeacherCard.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="TemporaryCard" Collapsed="true">
-    <Position X="7.25" Y="1.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AEAAAAAgAAAAAgAAAAAAAAAQAAAAAAAAACAAAAAAAAA=</HashCode>
-      <FileName>TemporaryCard.h</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Enum Name="Type" Collapsed="true">
-    <Position X="11.5" Y="1.75" Width="1.5" />
+  <Enum Name="BusType" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaAAAA=</HashCode>
       <FileName>Bus.h</FileName>
     </TypeIdentifier>
   </Enum>
+  <Enum Name="CardType" Collapsed="true">
+    <Position X="4.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Card.h</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Enum Name="Sex" Collapsed="true">
-    <Position X="9.75" Y="1.75" Width="1.5" />
+    <Position X="2.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
       <FileName>People.h</FileName>

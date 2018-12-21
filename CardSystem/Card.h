@@ -25,7 +25,7 @@ public:
 	void TopUp();//充值
 	void OutPutInfo();//显示卡的信息
 	~Card();
-protected:
+private:
 	People owner;//持卡者
 	CardType type;//卡的类型
 	double balance;//卡内余额

@@ -7,7 +7,7 @@
 
 using namespace std;
 
-void Menu(vector<Card>& c);//总菜单
+void Menu();//总菜单
 void SeleteMenu(vector<Card>& c);//选择菜单
 void Menu1(vector<Card>& c);//创建新卡菜单
 void Menu2(vector<Card>& c);//查询信息菜单

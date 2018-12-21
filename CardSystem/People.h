@@ -14,6 +14,8 @@ using namespace std;
 */
 enum Sex { MALE, FEMALE };
 
+const int N = 32;
+
 /**
 * 人
 * 包括人的基本信息：
@@ -28,10 +30,10 @@ public:
 	void OutPutInfo();//显示人的信息
 	~People();
 private:
-	char name[32];//姓名
+	char name[N];//姓名
 	Sex sex;//性别
-	char position[32];//职务
-	char unit[32];//所属单位
+	char position[N];//职务
+	char unit[N];//所属单位
 	unsigned int number;//工资号/学号
 };
 
