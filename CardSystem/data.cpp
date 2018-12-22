@@ -18,7 +18,7 @@ int GetNumberFromFile(string fname)
 	}
 
 	Card c;
-	while (infile.read((char*)&c, sizeof(c)))//强制类型转换为(char*),
+	while (infile.read((char*)&c, sizeof(c)))//强制类型转换为(char*)
 	{
 		count++;
 	}
@@ -123,7 +123,7 @@ void FlashFile(string fname, vector<Card>& c)
 //创建新卡
 void CreateCard(vector<Card>& c, unsigned int num)
 {
-	int s = Search(c, num);
+	unsigned int s = Search(c, num);
 	if (s != -1)//已存在
 	{
 		cout << "此卡已存在！" << endl;
@@ -141,7 +141,7 @@ void CreateCard(vector<Card>& c, unsigned int num)
 //查询信息
 void OutPutInfo(vector<Card>& c, unsigned int num)
 {
-	int s = Search(c, num);
+	unsigned int s = Search(c, num);
 	if (s == -1)//没找到
 		cout << "该卡不存在！" << endl;
 	else
@@ -161,7 +161,7 @@ void TopUp(vector<Card>& c, unsigned int num)
 //销毁卡片
 void DestroyCard(vector<Card>& c, unsigned int num)
 {
-	int s = Search(c, num);
+	unsigned int s = Search(c, num);
 	if (s == -1)//没找到
 		cout << "该卡不存在！" << endl;
 	else

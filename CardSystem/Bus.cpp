@@ -1,10 +1,25 @@
 #include "stdafx.h"
 #include "Bus.h"
-#include "data.h"
 
 Bus::Bus()
 {
-	passengers = all = 0;//初始化乘车人数
+	passengers = all = on_time = 0;//初始化乘车人数
+
+	ifstream infile;
+	infile.open("schedule.txt", ios::binary);//以读方式打开文件
+
+	if (!infile)
+	{
+		cout << "打开失败！" << endl;
+		getchar();
+		exit(0);
+	}
+
+	for (int i = 0; i < 3; i++)
+	{
+		infile >> schedule[i].hour;
+		infile >> schedule[i].min;
+	}
 }
 
 //输入班车的信息
@@ -35,38 +50,44 @@ void Bus::InputInfo()
 	cin >> license_plate_number;
 }
 
-void Bus::GetOn(string f)
+void Bus::GetOn(vector<Card>& c, int t)
 {
 	passengers = 0;//到站、乘客下车
-	int n = GetNumberFromFile(f);//得到待上车人数
-	vector<Card>c(n);
-	GetData(f, c);//得到数据
+	int hour, min;
+	cout << "到达时间：" << endl;
+	cin >> hour;
+	cin >> min;
+
+	if (hour < schedule[t].hour || (hour == schedule[t].hour && min <= schedule[t].min))
+	{
+		cout << "准时到达" << endl;
+		on_time++;
+	}
+	else
+		cout << "迟到" << endl;
 
 	int i = 0;//车上人数
 	int j = 0;
-	while (i < max && j < n)//班车未满且还有人待上车
+	while (i < max && j < c.size())//班车未满且还有人待上车
 	{
 		if (c[j].GetOn())//上车成功
+		{
 			i++;//车上人数+1
+		}
 		j++;
-		
+
 	}
-	if (i == max && j < n)//车满、还有人没上车
+	if (i == max && j < c.size())//车满、还有人没上车
 		cout << "班车已满，请乘下一趟班车！" << endl;
 
 	passengers = i;
 	all += passengers;//总乘车人数增加i
-
-	cout << endl;
-	OutPutInfo();
-	cout << endl;
-
-	FlashFile(f, c);
 }
 
 //显示班车的信息
 void Bus::OutPutInfo()
 {
+	cout << endl;
 	cout << "司机信息：" << endl;
 	cout << "***" << endl;
  	driver.OutPutInfo();//司机信息
@@ -87,6 +108,7 @@ void Bus::OutPutInfo()
 	cout << "车牌号：" << license_plate_number << endl;
 	cout << "当前乘客数：" << passengers << endl;
 	cout << "总乘车人数：" << all << endl;
+	cout << "准时率：" << (double)on_time / 3 << endl;
 }
 
 

@@ -6,7 +6,7 @@ Card::Card()
 {
 	balance = times_of_this_month = 0;//初始时余额为0，乘车次数为0
 	time0 = time(0);// 开通卡时的时间
-	valid_time = 0;//初始化有限时间
+	valid_time = 0;//初始化有效时间
 }
 
 //输入卡的信息
@@ -74,9 +74,10 @@ bool Card::Pay()
 	{
 		balance -= 2;//刷卡上车，扣费2元
 		times_of_this_month++;//本月乘车次数+1
-		cout << "乘车成功！ ";
 		if (balance <= 5)
-			cout << "余额过低，及时充值！" << endl;
+			cout << "乘车成功！ 余额过低，及时充值！" << endl;
+		else
+			cout << "乘车成功！" << endl;
 		return true;
 	}
 	else

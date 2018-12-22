@@ -11,16 +11,16 @@ void Menu()
 	cout << "******************************" << endl;
 	cout << "请选择要进入的系统：（卡片输入0，班车输入1）" << endl;
 	cin >> type;
+
+	int n = GetNumberFromFile(fname);//得到卡文件中数据总量
+	vector<Card>c(n);//创建卡片数组
+	GetData(fname, c);//取出数据，存入数组
+
 	if (type == 0)
-	{
-		int n = GetNumberFromFile(fname);//得到卡文件中数据总量
-		vector<Card>c(n);
-		GetData(fname, c);//取出数据
 		SeleteMenu(c);
-	}
 		
 	else
-		BusMenu();
+		BusMenu(c);
 }
 
 //选择菜单
@@ -109,24 +109,25 @@ void Menu4(vector<Card>& c)
 	SeleteMenu(c);//返回选择菜单
 }
 
-//退出系统
-void Menu0(vector<Card>& c)
-{
-	FlashFile(fname, c);//更新文件
-	cout << "**********使用愉快！**********" << endl;
-}
-
 //班车菜单
-void BusMenu()
+void BusMenu(vector<Card>& c)
 {
 	Bus bus;//班车
 	cout << "******************************" << endl;
 	bus.InputInfo();//输入班车信息
 	cout << "---" << endl;
-	cout << "地点：南校区" << endl;
-	bus.GetOn(fname);
+	bus.GetOn(c, 0);//上车
 	cout << "---" << endl;
-	cout << "地点：北校区" << endl;
-	bus.GetOn(fname);
+	bus.GetOn(c, 1);//上车
+	cout << "---" << endl;
+	bus.GetOn(c, 2);//上车
+	bus.OutPutInfo();
+	Menu0(c);
+}
+
+//退出系统
+void Menu0(vector<Card>& c)
+{
+	FlashFile(fname, c);//更新文件
 	cout << "**********使用愉快！**********" << endl;
 }

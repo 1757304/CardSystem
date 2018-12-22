@@ -13,5 +13,5 @@ void Menu1(vector<Card>& c);//创建新卡菜单
 void Menu2(vector<Card>& c);//查询信息菜单
 void Menu3(vector<Card>& c);//余额充值菜单
 void Menu4(vector<Card>& c);//销毁卡片菜单
+void BusMenu(vector<Card>& c);//班车菜单
 void Menu0(vector<Card>& c);//退出系统
-void BusMenu();//班车菜单
