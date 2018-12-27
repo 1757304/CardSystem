@@ -34,7 +34,7 @@ public:
 private:
 	People driver;//司机
 	BusType type;//车型
-	char license_plate_number;//车牌号
+	int license_plate_number;//车牌号
 	int max;//核载人数
 	int passengers;//当前乘客数
 	int all;//总乘车人数
